@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id = "formbody">
+    <form action="form.html" method="POST">
+        <h1 class="h1">Loan Application</h1>
+        <fieldset class="fieldset">
+          <legend class="legend">Basic Information</legend>
+          <br>
+          <label for="first-name" class="label">First Name</label>
+          <input type="text" name="first-name" class="input" required />
+          <br>
+          <label for="middle-initial" class="label">Middle Initial</label>
+          <input type="text" name="middle-initial" class="input" required />
+          <br>
+          <label for="last-name" class="label">Last Name</label>
+          <input type="text" name="last-name" class="input" required/>
+          <br>
+          <br>
+          <label for="email" class="label">Email</label>
+          <input type="email" name="email" placeholder="example@gmail.com" class="input" required/>
+          <br>
+          <label for="telephone" class="label">Contact Number</label>
+          <input type="tel"  name="telephone" class="input" pattern="[0-9]{10}"required/>
+          <br>
+          <label for="address" class="label">Home Address</label>
+          <input type="text" name="address" class="input" required/>
+          <br>
+          <br>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="legend">Work Information</legend>
+          <br>
+          <label for="occupation" class="label">Current Occupation</label>
+          <input type="text" name="occupation" class="input" required/>
+          <br>
+          <label for="employer-name" class="label">Employer Name</label>
+          <input type="text" name="employer-name" class="input" required/>
+          <br>
+          <label for="employer-location" class="label">Employer Address</label>
+          <input type="text" name="employer-location" class="input" required/>
+          <br>
+          <br>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="legend">Loan Type & Amount</legend>
+          <br>
+          <label for="loan-amount" class="label">Loan Type</label>
+          <input name="loan" list="type-of-loan" class="input" required />
+          <datalist id="type-of-loan">
+            <option value="Agribusiness">
+            <option value="Equipment">
+            <option value="Auto">
+            <option value="Home">
+            <option value="LiveStock">
+            </option>
+          </datalist>
+          <br>
+          <label for="loan-amount" class="label">Loan Amount</label>
+          <input type="text" name="loan-amount" class="input"required />
+          <br>
+          <br>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="legend">Length of Loan(in months)</legend>
+          <br>
+          <input type="radio" name="length-of-time" value="5" id="loan-term-5" class="input" required/>
+          <label for="loan-term-5" class="label">5</label>
+          <input type="radio" name="length-of-time" value="15" id="loan-term-15" class="input"required />
+          <label for="loan-term-15" class="label">15</label>
+          <input type="radio" name="length-of-time" value="30" id="loan-term-30" class="input" required/>
+          <label for="loan-term-30" class="label">30</label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="legend">Marital Status</legend>
+          <br>
+          <input type="radio" name="status" value="single" id="single" class="input"  required/>
+          <label for="single" class="label">Single</label>
+          <input type="radio" name="status" value="married" id="married" class="input" required/>
+          <label for="married" class="label">Married</label>
+          <input type="radio" name="status" value="divorced" id="divorced" class="input" required/>
+          <label for="divorced" class="label">Divorced</label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="legend">Explain Your Concern </legend>
+          <br>
+          <textarea name="comment" class ="textarea"></textarea>
+        </fieldset>
+        <button type="submit" class="hover-link primary-button">Submit</button>
+      </form>       
+</body>
+</html>
